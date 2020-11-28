@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bubble sort</h1>
+    <form action="/" method="POST">
+        <input id="inputData" name="stringArray" value ="{{stringArray}}" type="text" style="margin-top: 10px; font-size:20px">
+        <button type="submit" style="margin-top: 10px; margin-left: 10px;font-size:20px; width:90px" > Sort</button>
+        
+    </form>
+    <button id="generateData" style="margin-top: 20px; font-size:20px; " onclick="Generate()"> Generate</button>
+    <script>
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * Math.floor(max));
+        }
+        let inputData = document.getElementById('inputData')
+
+        function Generate() {
+            let res = []
+            let size = getRandomInt(10)
+            if(size<4) size = 4
+            for(let i=0;i<size;i+=1) {
+                res.push(getRandomInt(100))
+            }
+            inputData.value=res.join(',')
+        }
+
+    </script>
+
+</body>
+</html>
