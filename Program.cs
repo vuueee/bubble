@@ -12,6 +12,7 @@ namespace HelloWorld
             Console.WriteLine($"{Environment.NewLine}Hellow, {name}, on {currentDate:d} at {currentDate:t}!");
             Console.Write($"{Environment.NewLine}Press any key to exit..!from staged mod doubel!.");
             Console.ReadKey(true);
+            Console.WriteLine("double modif");
         }
         
     }
